@@ -8,8 +8,8 @@ This repository provides a Python utility to visualize the incompressible potent
 Clone the repository and install the required dependencies.
 
 ```bash
-git clone https://github.com/yourusername/bubble-potential-plotter.git
-cd bubble-potential-plotter
+git clone https://github.com/shimonuri/bubble-dynamics-utils.git
+cd bubble-dynamics-utils
 pip install -r requirements.txt
 ```
 
@@ -22,9 +22,9 @@ pip install -r requirements.txt
 
 The primary function in this module is `plot_potential`, which generates a potential plot based on user-defined inputs.
 
-### Example
+### Example (in project dir)
 ```python
-from bubble_potential_plotter import plot_potential
+import plot_potential
 
 surface_tension = 0.072  # N/m
 drive_pressure = 0.5 * 101325  # Pa
@@ -32,7 +32,7 @@ ambient_and_vapor_pressure = 1 * 101325  # Pa
 ambient_equilibrium_point = 1e-6 ** (5 / 2)  # m^(5/2)
 polytropic_index = 5 / 3
 
-plot_potential(
+plot_potential.plot_potential(
     surface_tension=surface_tension,
     drive_pressure=drive_pressure,
     ambient_and_vapor_pressure=ambient_and_vapor_pressure,
